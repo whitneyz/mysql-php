@@ -35,8 +35,8 @@ Then we will create a login & registration form for the students to manage their
 
 -[x] Create `index.php`, `insert.php`
 -[x] Include the `connection.php` file in both, but make sure your `PHP` code won't run if the connection file isn't included
--[ ] Create a form that allows you to fill in the table with your data in `insert.php`
--[ ] Make sure your form requires every column of the table to be filled
+-[x] Create a form that allows you to fill in the table with your data in `insert.php`
+-[x] Make sure your form requires every column of the table to be filled
 -[ ] Test by inserting your data
 -[ ] Check your database program to see if all your data is correctly entered into the database
 

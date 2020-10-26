@@ -5,30 +5,29 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-require 'connection.php';
-require 'header.php';
+require 'view/includes/header.php';
 
 
 ?>
 
-// the becode student will fill this form
+<!-- the becode student will fill this form-->
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInput">First name</label>
+      <input type="text" name="firstname" required value="" class="form-control mb-2" id="inlineFormInput" placeholder="First name">
     </div>
       <div class="col-auto">
-          <label class="sr-only" for="inlineFormInput">Name</label>
-          <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+          <label class="sr-only" for="inlineFormInput">Last name</label>
+          <input type="text" name="lastname" required value="" class="form-control mb-2" id="inlineFormInput" placeholder="Last name">
       </div>
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <label class="sr-only" for="inlineFormInputGroup">email</label>
       <div class="input-group mb-2">
         <div class="input-group-prepend">
           <div class="input-group-text">@</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+        <input type="text" name="email" required value="" class="form-control" id="inlineFormInputGroup" placeholder="email">
       </div>
     </div>
     <div class="col-auto">
@@ -40,7 +39,7 @@ Remember me
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      <button type="submit" value="" class="btn btn-primary mb-2">Submit</button>
     </div>
   </div>
 </form>
