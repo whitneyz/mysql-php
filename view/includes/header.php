@@ -10,6 +10,6 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style/stylesheet.css" type="text/css">
-    <title>Price calculation</title>
+    <title>SQL</title>
 </head>
 <body>

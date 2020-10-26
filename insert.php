@@ -11,15 +11,15 @@ require 'view/includes/header.php';
 ?>
 
 <!-- the becode student will fill this form-->
-<form>
+<form method="post" id="login-user">
   <div class="form-row align-items-center">
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">First name</label>
-      <input type="text" name="firstname" required value="" class="form-control mb-2" id="inlineFormInput" placeholder="First name">
+      <input type="text" name="first-name" required value="" class="form-control mb-2" id="inlineFormInput" placeholder="First name">
     </div>
       <div class="col-auto">
           <label class="sr-only" for="inlineFormInput">Last name</label>
-          <input type="text" name="lastname" required value="" class="form-control mb-2" id="inlineFormInput" placeholder="Last name">
+          <input type="text" name="last-name" required value="" class="form-control mb-2" id="inlineFormInput" placeholder="Last name">
       </div>
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInputGroup">email</label>
@@ -43,5 +43,5 @@ Remember me
     </div>
   </div>
 </form>
-<? require 'footer.php';?>
+<? require 'view/includes/footer.php';?>
 

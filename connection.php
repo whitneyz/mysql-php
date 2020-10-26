@@ -19,16 +19,13 @@ function openDB()
 
 $pdo = openDB();
 
-if(empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email'])) {
-        $handle = $pdo->prepare('INSERT INTO student VALUES (:first-name, :last-name, :email)');// you do not need to specify what columns you are adding data into the table name student is enough
-        $message = 'Your succesfully logged in';
-    } /*else {
-        $handle = $pdo->prepare('UPDATE user SET firstname = :firstname, lastname = :lastname, year = :year WHERE id = :id');//@todo change VALUES to SET
-        $handle->bindValue(':id', $_POST['id']);
-        $message = 'Your record has been updated';
-    }*/
-
-    $handle->bindValue(':firstname', $_POST['firstname']);
-    $handle->bindValue(':lastname', $_POST['lastname']);
-    $handle->bindValue(':year', date('Y'));
+if (!empty($_POST['first-name']) && !empty($_POST['last-name']) && !empty($_POST['email'])) {
+    $handle = $pdo->prepare('INSERT INTO student (firstname, lastname, email) VALUES (:firstname, :lastname, :email)');// you do not need to specify what columns you are adding data into the table name student is enough
+    $message = 'Your succesfully logged in';
+    $handle->bindValue(':firstname', $_POST['first-name']);
+    $handle->bindValue(':lastname', $_POST['last-name']);
+    $handle->bindValue(':email', $_POST['email']);
     $handle->execute();
+var_dump($handle);
+}
+
