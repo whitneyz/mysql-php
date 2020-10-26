@@ -17,3 +17,4 @@ function openDB()
     return new PDO('mysql:host=' . $dbhost . ';dbname=' . $db, $dbuser, $dbpass, $driverOptions);
 }
 
+$pdo = openDB();

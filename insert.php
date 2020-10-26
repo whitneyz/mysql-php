@@ -6,7 +6,9 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 require 'connection.php';
-require 'includes/header.php';
+require 'header.php';
+
+
 ?>
 
 // the becode student will fill this form
@@ -16,6 +18,10 @@ require 'includes/header.php';
       <label class="sr-only" for="inlineFormInput">Name</label>
       <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
     </div>
+      <div class="col-auto">
+          <label class="sr-only" for="inlineFormInput">Name</label>
+          <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+      </div>
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInputGroup">Username</label>
       <div class="input-group mb-2">
@@ -38,5 +44,5 @@ Remember me
     </div>
   </div>
 </form>
-<? require 'includes/footer.php';?>
+<? require 'footer.php';?>
 
