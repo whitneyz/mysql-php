@@ -43,8 +43,8 @@ Then we will create a login & registration form for the students to manage their
 ### Step 4:
 We have managed to push our info to a local database, now let's try and pull that same information out of there, follow these instructions:
 
--[ ] On `index.php`, list a table with summaries of most of the details of all people
--[ ] Make sure the table shows the following:
+-[x] On `index.php`, list a table with summaries of most of the details of all people
+-[x] Make sure the table shows the following:
     - Their first name
     - Their last name
     - Their email

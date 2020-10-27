@@ -8,8 +8,8 @@ error_reporting(E_ALL);
 require 'connection.php';
 require 'insert.php';
 
-// I think that the submitted summarized info from all users insert.php should be visible here
-// loop the info from the database and show it in the format below
+// table for the becode employee to view all the info of the becode student in a table
+
 ?>
     <table class="table">
     <thead class="thead-light">
@@ -24,6 +24,7 @@ require 'insert.php';
     </tr>
     </thead>
     <tbody>
+    <!-- loop the info from the database and show it in the table-->
 <?php foreach ($selectedBecoders as $becoder): ?>
     <tr>
         <th scope="row">1</th> <!-- oplossing zoeken 1, 2, 3, -->
