@@ -16,6 +16,7 @@ require 'insert.php';
     <tr>
         <form method="post">
             <th scope="col">#</th>
+            <input type=""
             <th scope="col">First name</th>
             <th scope="col">Last name</th>
             <th scope="col">Email</th>

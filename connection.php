@@ -29,3 +29,15 @@ if (!empty($_POST['first-name']) && !empty($_POST['last-name']) && !empty($_POST
 var_dump($handle);
 }
 
+
+$handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student');
+$handle->bindValue(':firstname', $_POST['first-name']);
+$handle->bindValue(':lastname', $_POST['last-name']);
+$handle->bindValue(':email', $_POST['email']);
+$handle->bindValue(':id', $_POST['id']);// link page (profile.php?user=$user_id)
+$handle->execute();
+
+$selectedBecoders = $handle->fetchAll();
+var_dump($selectedBecoders);
+
+
