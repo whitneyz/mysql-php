@@ -26,11 +26,11 @@ require 'insert.php';
     <tbody>
 <?php foreach ($selectedBecoders as $becoder): ?>
     <tr>
-        <th scope="row">1</th> <!-- oplossing zoeken -->
+        <th scope="row">1</th> <!-- oplossing zoeken 1, 2, 3, -->
         <td><?php echo($becoder['firstname']) ?></td>
         <td><?php echo($becoder['lastname']) ?></td>
         <td><?php echo($becoder['email']) ?></td>
-        <td><?php echo($becoder['id']) ?></td>
+        <td><a href=" <?php echo("profile.php?user=" .$becoder['id']) ?>" > <?php echo $becoder ['id']?> </a></td>       -->
     </tr>
 <?php endforeach; ?>
     </tbody>
