@@ -19,25 +19,24 @@ function openDB()
 
 $pdo = openDB();
 
-if (!empty($_POST['first-name']) && !empty($_POST['last-name']) && !empty($_POST['email'])) {
+if (!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email'])) {
     $handle = $pdo->prepare('INSERT INTO student (firstname, lastname, email) VALUES (:firstname, :lastname, :email)');// you do not need to specify what columns you are adding data into the table name student is enough
     $message = 'Your succesfully logged in';
-    $handle->bindValue(':firstname', $_POST['first-name']);
-    $handle->bindValue(':lastname', $_POST['last-name']);
+    $handle->bindValue(':firstname', $_POST['firstname']);
+    $handle->bindValue(':lastname', $_POST['lastname']);
     $handle->bindValue(':email', $_POST['email']);
     $handle->execute();
-var_dump($handle);
+var_dump($_POST);
 }
 
 
 $handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student');
-$handle->bindValue(':firstname', $_POST['first-name']);
-$handle->bindValue(':lastname', $_POST['last-name']);
+$handle->bindValue(':firstname', $_POST['firstname']);
+$handle->bindValue(':lastname', $_POST['lastname']);
 $handle->bindValue(':email', $_POST['email']);
-$handle->bindValue(':id', $_POST['id']);// link page (profile.php?user=$user_id) link is <a html?
 $handle->execute();
 
 $selectedBecoders = $handle->fetchAll();
-var_dump($selectedBecoders);
+//var_dump($selectedBecoders);
 
 

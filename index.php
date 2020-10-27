@@ -30,7 +30,7 @@ require 'insert.php';
         <td><?php echo($becoder['firstname']) ?></td>
         <td><?php echo($becoder['lastname']) ?></td>
         <td><?php echo($becoder['email']) ?></td>
-        <td><a href=" <?php echo("profile.php?user=" .$becoder['id']) ?>" > <?php echo $becoder ['id']?> </a></td>       -->
+        <td><a href=" <?php echo("profile.php?user=" .$becoder['id']) ?>" > <?php echo $becoder ['id']?> </a></td>
     </tr>
 <?php endforeach; ?>
     </tbody>
