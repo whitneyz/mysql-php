@@ -11,12 +11,11 @@ require 'insert.php';
 // I think that the submitted summarized info from all users insert.php should be visible here
 // loop the info from the database and show it in the format below
 ?>
-<table class="table">
+    <table class="table">
     <thead class="thead-light">
     <tr>
         <form method="post">
             <th scope="col">#</th>
-            <input type=""
             <th scope="col">First name</th>
             <th scope="col">Last name</th>
             <th scope="col">Email</th>
@@ -25,24 +24,15 @@ require 'insert.php';
     </tr>
     </thead>
     <tbody>
+<?php foreach ($selectedBecoders as $becoder): ?>
     <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <th scope="row">1</th> <!-- oplossing zoeken -->
+        <td><?php echo($becoder['firstname']) ?></td>
+        <td><?php echo($becoder['lastname']) ?></td>
+        <td><?php echo($becoder['email']) ?></td>
+        <td><?php echo($becoder['id']) ?></td>
     </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-    </tr>
+<?php endforeach; ?>
     </tbody>
-</table>
+    </table>
 

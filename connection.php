@@ -34,7 +34,7 @@ $handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student');
 $handle->bindValue(':firstname', $_POST['first-name']);
 $handle->bindValue(':lastname', $_POST['last-name']);
 $handle->bindValue(':email', $_POST['email']);
-$handle->bindValue(':id', $_POST['id']);// link page (profile.php?user=$user_id)
+$handle->bindValue(':id', $_POST['id']);// link page (profile.php?user=$user_id) link is <a html?
 $handle->execute();
 
 $selectedBecoders = $handle->fetchAll();
