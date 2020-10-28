@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 require 'connection.php';
 require 'insert.php';
+require 'profile.php';
 
 // table for the becode employee to view all the info of the becode student in a table
 

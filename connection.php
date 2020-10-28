@@ -19,7 +19,8 @@ function openDB()
 
 $pdo = openDB();
 
-if (!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email'])) {
+//if student fills in first and lastname and email the info will be inserted into the database
+if (!empty(isset($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']))) {
     $handle = $pdo->prepare('INSERT INTO student (firstname, lastname, email) VALUES (:firstname, :lastname, :email)');// you do not need to specify what columns you are adding data into the table name student is enough
     $message = 'Your succesfully logged in';
     $handle->bindValue(':firstname', $_POST['firstname']);
@@ -30,13 +31,11 @@ var_dump($_POST);
 }
 
 
-$handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student');
-$handle->bindValue(':firstname', $_POST['firstname']);
-$handle->bindValue(':lastname', $_POST['lastname']);
-$handle->bindValue(':email', $_POST['email']);
-$handle->execute();
+    $handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student WHERE id');
+    
+    $handle->execute();
 
-$selectedBecoders = $handle->fetchAll();
+    $selectedBecoders = $handle->fetchAll();
 //var_dump($selectedBecoders);
 
 
