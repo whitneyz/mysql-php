@@ -15,7 +15,7 @@ Their last name
 Their email
 Their photo
 */
-§becoder=
+§becoder =
 ?>
 <!--image of keyboard-->
 <div class="text-center" style="height: fit-content">

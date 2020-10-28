@@ -31,7 +31,7 @@ var_dump($_POST);
 }
 
 
-    $handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student WHERE id');
+    $handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student WHERE id:?');
     
     $handle->execute();
 
