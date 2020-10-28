@@ -9,6 +9,7 @@ require 'login.php';
 require 'connection.php';
 require 'register.php';
 require 'profile.php';
+require 'auth.php';
 
 // table for the becode employee to view all the info of the becode student in a table
 
