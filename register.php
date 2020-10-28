@@ -43,5 +43,17 @@ Remember me
     </div>
   </div>
 </form>
+<div
+<form>
+    <fieldset disabled>
+        <div class="form-group">
+            <label for="disabledTextInput">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+        </div>
+        <div class="form-group">
+            <label for="disabledTextInput">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+        </div>
+</div>
 <? require 'view/includes/footer.php';?>
 
