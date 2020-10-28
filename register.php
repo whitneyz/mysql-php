@@ -43,17 +43,25 @@ Remember me
     </div>
   </div>
 </form>
-<div
-<form>
-    <fieldset disabled>
-        <div class="form-group">
-            <label for="disabledTextInput">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-        </div>
-        <div class="form-group">
-            <label for="disabledTextInput">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-        </div>
-</div>
+<form class="form-inline">
+    <div class="form-group">
+        <label for="inputPassword6">Password</label>
+        <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+        <small id="passwordHelpInline" class="text-muted">
+            Must be 8-20 characters long.
+        </small>
+    </div>
+</form>
+<form class="form-inline">
+    <div class="form-group">
+        <label for="inputPassword6">Password</label>
+        <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+        <small id="passwordHelpInline" class="text-muted">
+            Must be 8-20 characters long.
+        </small>
+    </div>
+</form>
+
+
 <? require 'view/includes/footer.php';?>
 
