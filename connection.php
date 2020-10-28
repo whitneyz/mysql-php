@@ -27,7 +27,7 @@ if (!empty(isset($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_
     $handle->bindValue(':lastname', $_POST['lastname']);
     $handle->bindValue(':email', $_POST['email']);
     $handle->execute();
-var_dump($_POST);
+//var_dump($_POST);
 }
 
 
@@ -36,6 +36,6 @@ var_dump($_POST);
 
     $selectedBecoders = $handle->fetchAll();
    // echo $selectedBecoders[0]["firstname"];
-var_dump($selectedBecoders);
+//var_dump($selectedBecoders);
 
 
