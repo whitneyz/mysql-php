@@ -31,11 +31,11 @@ var_dump($_POST);
 }
 
 
-    $handle = $pdo->prepare('SELECT firstname, lastname, email, id FROM student WHERE id:?');
-    
+    $handle = $pdo->prepare('SELECT * FROM student');
     $handle->execute();
 
     $selectedBecoders = $handle->fetchAll();
-//var_dump($selectedBecoders);
+   // echo $selectedBecoders[0]["firstname"];
+var_dump($selectedBecoders);
 
 
