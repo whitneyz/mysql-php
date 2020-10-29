@@ -19,25 +19,49 @@ Their photo
 ?>
 <!--image of keyboard-->
 <div class="text-center" style="height: fit-content">
- <img src=resources/keyboard.jpeg class="img-fluid;" alt="keyboard">
-    </div>
+    <img src=resources/keyboard.jpeg class="img-fluid;" alt="keyboard">
+</div>
 <!-- card with info becode student-->
-<?php if (isset($_GET["user"])){
+<?php if (isset($_GET["user"])) {
     $id = $_GET["user"];
     echo $id;
-}else{
+} else {
     $id = 0;
 }
+
+function getCat()
+{
+    $getData = file_get_contents( 'https://api.thecatapi.com/v1/images/search');
+    $response = json_decode($getData, true);
+    return $response[0]['url'];
+
+/*    // create curl resource
+    $ch = curl_init();
+    // set url
+    curl_setopt($ch, CURLOPT_URL, "https://api.thecatapi.com/v1/images/search");
+    // $output contains the output json
+    $output = curl_exec($ch);
+    // close curl resource to free up system resources
+    curl_close($ch);
+    $catUrl = json_decode($output, true);
+return $catUrl;*/
+}
+
+
+//check if the logged in user's ID equals that of the one requested on the profile page
+
+//if()
 ?>
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="..."> <!-- image with api-->
+    <img src="<?php  echo getCat() ?>" class="card-img-top" alt="..."> <!-- image with api-->
     <div class="card" style="width: 18rem;">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">First name: <?php echo ($selectedBecoders[$id]['firstname'])?> </li> <!--because array starts with 0 thus -1-->
-            <li class="list-group-item">Last name: <?php echo ($selectedBecoders[$id]['lastname'])?></li>
-            <li class="list-group-item">email: <?php echo ($selectedBecoders[$id]['email'])?> </li>
+            <li class="list-group-item">First name: <?php echo($selectedBecoders[$id]['firstname']) ?> </li>
+            <!--because array starts with 0 thus -1-->
+            <li class="list-group-item">Last name: <?php echo($selectedBecoders[$id]['lastname']) ?></li>
+            <li class="list-group-item">email: <?php echo($selectedBecoders[$id]['email']) ?> </li>
         </ul>
     </div>
 
-<? require 'view/includes/footer.php';?>
+    <? require 'view/includes/footer.php'; ?>
 
