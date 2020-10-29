@@ -46,12 +46,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["regSubmit"])) {//works
 
     if ($_POST["inputPassword"] === $_POST["confirmPassword"]) {
         $inputPassword = $_POST["inputPassword"];
-        $hash = password_hash ($inputPassword,PASSWORD_BCRYPT);
+        $hash = password_hash($inputPassword, PASSWORD_BCRYPT);
 //first add column to database when done add hashed password to column
     } else {
-       echo "your password is not the same";
+        echo "your password is not the same";
 
     }
+}
 //}if ()
 
 //input password moet gehashd worden en in een variabele worden gezet
