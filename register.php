@@ -39,7 +39,7 @@ Remember me
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" value="" class="btn btn-primary mb-2">Submit</button>
+      <button type="submit" name="regSubmit" value="" class="btn btn-primary mb-2">Submit</button>
     </div>
   </div>
 </form>

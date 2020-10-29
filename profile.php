@@ -33,9 +33,9 @@ Their photo
   <img src="..." class="card-img-top" alt="..."> <!-- image with api-->
     <div class="card" style="width: 18rem;">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">First name: <?php echo ($selectedBecoders[$id-1]['firstname'])?> </li> <!--because array starts with 0 thus -1-->
-            <li class="list-group-item">Last name: <?php echo ($selectedBecoders[$id-1]['lastname'])?></li>
-            <li class="list-group-item">email: <?php echo ($selectedBecoders[$id-1]['email'])?> </li>
+            <li class="list-group-item">First name: <?php echo ($selectedBecoders[$id]['firstname'])?> </li> <!--because array starts with 0 thus -1-->
+            <li class="list-group-item">Last name: <?php echo ($selectedBecoders[$id]['lastname'])?></li>
+            <li class="list-group-item">email: <?php echo ($selectedBecoders[$id]['email'])?> </li>
         </ul>
     </div>
 
