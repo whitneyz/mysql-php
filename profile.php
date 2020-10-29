@@ -35,18 +35,14 @@ function getCat()
     $response = json_decode($getData, true);
     return $response[0]['url'];
 
-/*    // create curl resource
-    $ch = curl_init();
-    // set url
-    curl_setopt($ch, CURLOPT_URL, "https://api.thecatapi.com/v1/images/search");
-    // $output contains the output json
-    $output = curl_exec($ch);
-    // close curl resource to free up system resources
-    curl_close($ch);
-    $catUrl = json_decode($output, true);
-return $catUrl;*/
 }
 
+function isLoggedIn (){
+    // userid
+  $userId= $_GET["user"];
+    var_dump($userId);
+return $userId;
+}
 
 //check if the logged in user's ID equals that of the one requested on the profile page
 
@@ -55,6 +51,7 @@ return $catUrl;*/
 <div class="card" style="width: 18rem;">
     <img src="<?php  echo getCat() ?>" class="card-img-top" alt="..."> <!-- image with api-->
     <div class="card" style="width: 18rem;">
+        <div> CAN YOU SEE <?php $userId?> </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">First name: <?php echo($selectedBecoders[$id]['firstname']) ?> </li>
             <!--because array starts with 0 thus -1-->
